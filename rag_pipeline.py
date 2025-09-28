@@ -6,9 +6,10 @@ from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 import os
+import streamlit as st
 
 load_dotenv()
-api_key = os.environ.get("OPENAI_API_KEY")
+api_key = st.secrets["OPENAI_API_KEY"]
 
 
 def load_pdf(path):
