@@ -23,7 +23,7 @@ def splitted_docs(docs):
     return splitted_docs
 
 def create_embeddings(docs):
-    embeddings=OpenAIEmbeddings()
+    embeddings=OpenAIEmbeddings(openai_api_key=api_key)
     db=Chroma.from_documents(docs,embeddings)
     return db
 
